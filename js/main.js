@@ -8,3 +8,13 @@ $('body')
 .append($belowList)
 .append($aboveHeading)
 .append($aboveList);
+
+$('li').each(function () {
+  if ($(this).hasClass('below')) {
+    $belowList.append($(this));
+  } else {
+    $aboveList.append($(this));
+  };
+});
+
+$('ul:first-child').remove();
